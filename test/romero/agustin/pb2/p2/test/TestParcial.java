@@ -1,5 +1,7 @@
 package romero.agustin.pb2.p2.test;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class TestParcial {
@@ -7,6 +9,7 @@ public class TestParcial {
 	@Test
 	public void queSeExistaUnPlantelDeFutbol() {
 		Club nuevo = new Club ("Argentina");
+		
 		Jugador jugador1 = new Jugador(41716163, "Lionel Messi", 34,10, TipoDeRol.Delantero, EquipoJugador.Argentina);
 		Jugador jugador2 = new Jugador(1, "Gonzalo Montiel", 22, 4, TipoDeRol.Defensor, EquipoJugador.Argentina);
 		Jugador jugador3 = new Jugador(2, "Leandro Paredes", 34, 5, TipoDeRol.Delantero, EquipoJugador.Argentina);
@@ -19,6 +22,30 @@ public class TestParcial {
 		Jugador jugador10 = new Jugador(9, "Lautaro Martinez" ,25,31, TipoDeRol.MedioCampista, EquipoJugador.Argentina);
 		Jugador jugador11 = new Jugador(10, "Angel Di Maria" ,33 ,34, TipoDeRol.Delantero, EquipoJugador.Argentina);
 		Jugador jugador12 = new Jugador(11, "Lionel Scaloni", 50, 34, TipoDeRol.DT, EquipoJugador.Argentina);
+		
+		nuevo.crearPlantel(jugador1);
+		nuevo.crearPlantel(jugador2);
+		nuevo.crearPlantel(jugador3);
+		nuevo.crearPlantel(jugador4);
+		nuevo.crearPlantel(jugador5);
+		nuevo.crearPlantel(jugador6);
+		nuevo.crearPlantel(jugador7);
+		nuevo.crearPlantel(jugador8);
+		nuevo.crearPlantel(jugador9);
+		nuevo.crearPlantel(jugador10);
+		nuevo.crearPlantel(jugador11);
+		nuevo.crearPlantel(jugador12);
+		
+		Integer cantidadEsperada = 12;
+		
+		assertEquals(cantidadEsperada, nuevo.getCantidadJugadores());
+		
+	}
+	
+	@Test
+	public void queSePuedaRegistrarUnPartido() {
+		Club nuevo = new Club ("Argentina");
+		Club nuevo2 = new Club ("Colombia");
 		
 	}
 }
