@@ -47,6 +47,10 @@ public abstract class Persona {
 			return false;
 		return true;
 	}
+
+	public EquipoJugador getEquipo() {
+		return getEquipo();
+	}
 	
 	
 }

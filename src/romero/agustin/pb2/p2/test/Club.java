@@ -17,6 +17,11 @@ public class Club {
 		this.partido = new HashMap <>();
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+
 	public void crearPlantel(Jugador jugadorNuevo) {
 		equipo.add(jugadorNuevo);
 	}
@@ -26,18 +31,21 @@ public class Club {
 		return equipo.size();
 	}
 
-	public Boolean jugarPartido(Integer numeroPartido, Jugador jugadorArg, Jugador jugadorCol) {
+	public Boolean jugarPartido(Integer numeroPartido, Persona jugadorArg, Persona jugadorCol) throws NoPuedeJugarPartido {
 		EquipoJugador equipo1 = jugadorArg.getEquipo();
 		EquipoJugador equipo2 = jugadorCol.getEquipo();
 		Boolean seJuegaPartido= false;
 		
 		if(jugadorArg.getEquipo().equals(equipo1) && jugadorCol.getEquipo().equals(equipo2) ) {
 			seJuegaPartido = true;
+			this.partido.put(numeroPartido, jugadorArg);
+			this.partido.put(numeroPartido, jugadorCol);
 			return seJuegaPartido;
 		}
-		return seJuegaPartido;	
+		throw new NoPuedeJugarPartido();	
 	}
 
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

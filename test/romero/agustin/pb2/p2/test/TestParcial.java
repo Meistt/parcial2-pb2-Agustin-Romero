@@ -46,7 +46,7 @@ public class TestParcial {
 	}
 	
 	@Test
-	public void queSePuedaRegistrarUnPartido() {
+	public void queSePuedaJugarYRegistrarUnPartido() throws NoPuedeJugarPartido {
 		Club nuevo = new Club ("Argentina");
 		Club nuevo2 = new Club ("Colombia");
 		
@@ -67,4 +67,8 @@ public class TestParcial {
 		assertEquals(ve,vo);
 		
 	}
+	
+	
+	
+
 }
