@@ -10,11 +10,13 @@ public class Club {
 	private String nombre;
 	private Set <Persona> equipo;
 	private Map <Integer,Persona> partido;
+	private Map <Persona, Integer> goles;
 	
 	public Club(String nombre) {
 		this.nombre = nombre;
 		this.equipo = new HashSet<>();
 		this.partido = new HashMap <>();
+		this.goles = new HashMap <>();
 	}
 
 	public String getNombre() {
@@ -46,6 +48,12 @@ public class Club {
 	}
 
 	
+	public void registrarGoles(Integer numeroPartido, Jugador jugadorGol, String dondeJuega, Integer minutoGol) throws JugadorNoEncontradoException {
+		
+	}
+	
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -70,6 +78,8 @@ public class Club {
 			return false;
 		return true;
 	}
+
+	
 
 	
 	

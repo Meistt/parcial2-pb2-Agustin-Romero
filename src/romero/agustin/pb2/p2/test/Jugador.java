@@ -12,6 +12,12 @@ public class Jugador extends Persona{
 		this.numeroCamiseta = numeroCamiseta;
 	}
 
+	
+	public Integer getNumeroCamiseta() {
+		return numeroCamiseta;
+	}
+
+
 	public EquipoJugador getEquipo() {
 		return equipo;
 	}
