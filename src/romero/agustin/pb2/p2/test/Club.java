@@ -48,8 +48,10 @@ public class Club {
 	}
 
 	
-	public void registrarGoles(Integer numeroPartido, Jugador jugadorGol, String dondeJuega, Integer minutoGol) throws JugadorNoEncontradoException {
-		
+	public void registrarGoles(Integer numeroPartido, Jugador jugadorGol, String deDonde) throws JugadorNoEncontradoException {
+		for(Persona per : equipo) {
+			List <Persona> listDos 
+		}
 	}
 	
 	

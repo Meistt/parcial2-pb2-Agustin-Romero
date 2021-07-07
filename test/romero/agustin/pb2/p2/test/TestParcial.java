@@ -75,7 +75,7 @@ public class TestParcial {
 		Club nuevo = new Club("Argentina");
 		Club nuevo2 = new Club ("Colombia");
 		Jugador jugador1 = new Jugador(41716163, "Lionel Messi", 34,10, TipoDeRol.Delantero, EquipoJugador.Argentina);
-		nuevo.registrarGoles(1, jugador1, "Local", 25);
+		nuevo.registrarGoles(25, jugador1, "Local");
 	}
 	
 	
